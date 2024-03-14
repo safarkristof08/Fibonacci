@@ -14,6 +14,7 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{0A113CFB-8906-4EDA-8462-F89952BBE90E}"
 	ProjectSection(SolutionItems) = preProject
 		Class1.cs = Class1.cs
+		..\..\..\Desktop\hajozasi_szabalyzat_kerdessor_BOM.txt = ..\..\..\Desktop\hajozasi_szabalyzat_kerdessor_BOM.txt
 	EndProjectSection
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SzámolóGomb", "SzámolóGomb\SzámolóGomb.csproj", "{396D1F10-EE86-4F30-ADA5-0C606BEC8623}"
