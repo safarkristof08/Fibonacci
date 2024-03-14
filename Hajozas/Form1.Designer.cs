@@ -34,7 +34,6 @@
             válaszGomb3 = new VálaszGomb();
             label1 = new Label();
             pictureBox1 = new PictureBox();
-            Következő = new Button();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
@@ -99,21 +98,11 @@
             pictureBox1.TabIndex = 5;
             pictureBox1.TabStop = false;
             // 
-            // Következő
-            // 
-            Következő.Location = new Point(233, 17);
-            Következő.Name = "Következő";
-            Következő.Size = new Size(120, 33);
-            Következő.TabIndex = 6;
-            Következő.Text = "button1";
-            Következő.UseVisualStyleBackColor = true;
-            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
-            Controls.Add(Következő);
             Controls.Add(pictureBox1);
             Controls.Add(label1);
             Controls.Add(válaszGomb3);
@@ -137,6 +126,5 @@
         private VálaszGomb válaszGomb3;
         private Label label1;
         private PictureBox pictureBox1;
-        private Button Következő;
     }
 }

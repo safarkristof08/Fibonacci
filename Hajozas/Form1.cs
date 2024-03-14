@@ -95,5 +95,10 @@ namespace Hajozas
 
 
         }
+
+        private void Következõ_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
