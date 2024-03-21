@@ -2,6 +2,7 @@ namespace kigyosjatek
 {
     public partial class Form1 : Form
     {
+        List<KígyóElem> kígyó = new List<KígyóElem>();
         int fej_x = 100;
         int fej_y = 100;
         int irány_x = 1;
@@ -32,10 +33,15 @@ namespace kigyosjatek
 
             foreach (KígyóElem item in Controls)
             {
-                if (item.Top == fej_y && item.Left == fej_x)
+                if (item is KígyóElem)
                 {
-                    timer1.Enabled = false;
-                    return;
+                    KígyóElem k = (KígyóElem)item;
+                    if (k.Top == fej_y && k.Left == fej_x)
+                    {
+                        timer1.Enabled = false;
+                        return;
+
+                    }
                  
                 }
             }
@@ -46,14 +52,17 @@ namespace kigyosjatek
             KígyóElem ke = new KígyóElem();
             ke.Top = fej_y;
             ke.Left = fej_x;
+            kígyó.Add(ke);
             Controls.Add(ke);
             KeyDown += Form1_KeyDown;
 
             if (Controls.Count > hossz)
             {
+                KígyóElem levágandó = kígyó[0];
                 Controls.RemoveAt(0);
+                Controls.Remove(levágandó);
             }
-            if (lépésszám % 2 == 0) ke.BackColor = Color.Red;
+            if (lépésszám % 2 == 0) ke.BackColor = Color.LightYellow;
 
 
         }
