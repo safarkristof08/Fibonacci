@@ -37,5 +37,12 @@ namespace Adatkotes
         {
             countryDataBindingSource.RemoveCurrent();
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            FormCountry fc = new FormCountry();
+            fc.CountryData = countryDataBindingSource.Current as CountryData;
+            fc.Show();
+        }
     }
 }
