@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Adatkotes
 {
-    internal class CountryData
+    public class CountryData
 
     {
         public string Name { get; set; } = string.Empty;

@@ -28,16 +28,25 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
             dataGridView1 = new DataGridView();
             button1 = new Button();
             button2 = new Button();
             button3 = new Button();
+            countryDataBindingSource = new BindingSource(components);
+            nameDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
+            populationDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
+            areaInSquareKmDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)countryDataBindingSource).BeginInit();
             SuspendLayout();
             // 
             // dataGridView1
             // 
+            dataGridView1.AutoGenerateColumns = false;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { nameDataGridViewTextBoxColumn, populationDataGridViewTextBoxColumn, areaInSquareKmDataGridViewTextBoxColumn });
+            dataGridView1.DataSource = countryDataBindingSource;
             dataGridView1.Location = new Point(25, 105);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowTemplate.Height = 25;
@@ -52,6 +61,7 @@
             button1.TabIndex = 1;
             button1.Text = "Törlés";
             button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
             // 
             // button2
             // 
@@ -72,6 +82,28 @@
             button3.UseVisualStyleBackColor = true;
             button3.Click += button3_Click;
             // 
+            // countryDataBindingSource
+            // 
+            countryDataBindingSource.DataSource = typeof(CountryData);
+            // 
+            // nameDataGridViewTextBoxColumn
+            // 
+            nameDataGridViewTextBoxColumn.DataPropertyName = "Name";
+            nameDataGridViewTextBoxColumn.HeaderText = "Name";
+            nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
+            // 
+            // populationDataGridViewTextBoxColumn
+            // 
+            populationDataGridViewTextBoxColumn.DataPropertyName = "Population";
+            populationDataGridViewTextBoxColumn.HeaderText = "Population";
+            populationDataGridViewTextBoxColumn.Name = "populationDataGridViewTextBoxColumn";
+            // 
+            // areaInSquareKmDataGridViewTextBoxColumn
+            // 
+            areaInSquareKmDataGridViewTextBoxColumn.DataPropertyName = "AreaInSquareKm";
+            areaInSquareKmDataGridViewTextBoxColumn.HeaderText = "AreaInSquareKm";
+            areaInSquareKmDataGridViewTextBoxColumn.Name = "areaInSquareKmDataGridViewTextBoxColumn";
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -85,6 +117,7 @@
             Text = "Form1";
             Load += Form1_Load;
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)countryDataBindingSource).EndInit();
             ResumeLayout(false);
         }
 
@@ -94,5 +127,9 @@
         private Button button1;
         private Button button2;
         private Button button3;
+        private DataGridViewTextBoxColumn nameDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn populationDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn areaInSquareKmDataGridViewTextBoxColumn;
+        private BindingSource countryDataBindingSource;
     }
 }

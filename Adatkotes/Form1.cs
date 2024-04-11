@@ -10,7 +10,9 @@ namespace Adatkotes
         public Form1()
         {
             InitializeComponent();
-            dataGridView1.DataSource = countryList;
+            countryDataBindingSource.DataSource = countryList;
+            dataGridView1.DataSource = countryDataBindingSource;
+
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -29,6 +31,11 @@ namespace Adatkotes
                     countryList.Add(item);
                 }
             }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            countryDataBindingSource.RemoveCurrent();
         }
     }
 }
